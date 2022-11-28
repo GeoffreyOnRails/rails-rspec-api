@@ -27,7 +27,16 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem "guard-rspec", require: false
+  gem 'faker'
+  gem "rubocop", require: false
+  gem "rubocop-rspec", require: false
+  gem "pry"
+  gem "pry-byebug" # Integrates pry with byebug
+  gem "pry-doc" # Provide MRI Core documentation
+  gem "pry-rails" # Causes rails console to open pry. `DISABLE_PRY_RAILS=1 rails c` can still open with IRB
 end
 
 group :development do
